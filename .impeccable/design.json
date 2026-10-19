@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T13:08:00Z",
+  "title": "Design System: Tylcao",
+  "extensions": {
+    "colorMeta": {
+      "obsidian-ground": {
+        "role": "neutral",
+        "displayName": "Obsidian Ground",
+        "canonical": "oklch(12% 0.015 260)",
+        "tonalRamp": [
+          "#040507",
+          "#08090d",
+          "#0e111a",
+          "#151a27",
+          "#1f2638",
+          "#2f3950",
+          "#4a5775",
+          "#94a3b8"
+        ]
+      },
+      "surface-card": {
+        "role": "neutral",
+        "displayName": "Monolith Card Surface",
+        "canonical": "oklch(16% 0.02 260)",
+        "tonalRamp": [
+          "#07080f",
+          "#0f121d",
+          "#161b2a",
+          "#20263c",
+          "#2d3652",
+          "#3f4c71",
+          "#5e6e9c",
+          "#cbd5e1"
+        ]
+      },
+      "cyan-laser": {
+        "role": "primary",
+        "displayName": "Laser Cyan",
+        "canonical": "oklch(88% 0.17 215)",
+        "tonalRamp": [
+          "#083344",
+          "#0e7490",
+          "#06b6d4",
+          "#00f2fe",
+          "#38bdf8",
+          "#7dd3fc",
+          "#bae6fd",
+          "#e0f2fe"
+        ]
+      },
+      "emerald-telemetry": {
+        "role": "secondary",
+        "displayName": "Emerald Telemetry",
+        "canonical": "oklch(72% 0.18 160)",
+        "tonalRamp": [
+          "#064e3b",
+          "#047857",
+          "#059669",
+          "#10b981",
+          "#34d399",
+          "#6ee7b7",
+          "#a7f3d0",
+          "#ecfdf5"
+        ]
+      },
+      "violet-media": {
+        "role": "tertiary",
+        "displayName": "Spectral Violet",
+        "canonical": "oklch(62% 0.22 290)",
+        "tonalRamp": [
+          "#2e1065",
+          "#4c1d95",
+          "#6d28d9",
+          "#8b5cf6",
+          "#a78bfa",
+          "#c4b5fd",
+          "#ddd6fe",
+          "#f5f3ff"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero statements and high-impact section titles." },
+      "headline": { "displayName": "Headline", "purpose": "Pillar headers and major feature group titles." },
+      "title": { "displayName": "Title", "purpose": "Card titles, service categories, and modal headers." },
+      "body": { "displayName": "Body", "purpose": "Paragraphs and descriptions; minimum 14px floor." },
+      "label": { "displayName": "Label", "purpose": "Monospace telemetry, code snippets, tags, and status badges." }
+    },
+    "shadows": [
+      {
+        "name": "ambient-glow-cyan",
+        "value": "0 0 25px -5px rgba(6, 182, 212, 0.3)",
+        "purpose": "Active focus and hover elevation on primary controls."
+      },
+      {
+        "name": "telemetry-glow-emerald",
+        "value": "0 0 20px -5px rgba(16, 185, 129, 0.35)",
+        "purpose": "Operational status indicator ping and verification badges."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-precise",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Snappy, spring-like digital UI transitions."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Laser CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary high-conversion button for brief creation and key actions.",
+      "html": "<button class=\"ds-btn-primary\"><span>START A PROJECT</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\"><path d=\"M7 17L17 7M17 7H7M17 7V17\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: #00f2fe; color: #08090d; font-family: var(--font-geist-sans), sans-serif; font-size: 14px; font-weight: 700; padding: 10px 20px; border-radius: 12px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; } .ds-btn-primary:hover { transform: translateY(-1px); box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.5); background: #38bdf8; }"
+    },
+    {
+      "name": "Secondary Monolith Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary exploratory button for service catalogs and documentation.",
+      "html": "<button class=\"ds-btn-secondary\">EXPLORE SERVICES</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; background: #0f121d; color: #f1f5f9; font-family: var(--font-geist-sans), sans-serif; font-size: 14px; font-weight: 600; padding: 10px 20px; border-radius: 12px; border: 1px solid #1e263d; cursor: pointer; transition: border-color 0.2s, background 0.2s; } .ds-btn-secondary:hover { border-color: rgba(6, 182, 212, 0.4); background: #161b2a; color: #00f2fe; }"
+    },
+    {
+      "name": "Operational Status Badge",
+      "kind": "chip",
+      "refersTo": "badge-telemetry",
+      "description": "Live uptime and project availability indicator pill.",
+      "html": "<div class=\"ds-status-pill\"><span class=\"ds-pulse-dot\"></span><span>ONLINE • Q4/Q1 ACTIVE</span></div>",
+      "css": ".ds-status-pill { display: inline-flex; align-items: center; gap: 8px; background: rgba(6, 78, 59, 0.25); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-family: var(--font-geist-mono), monospace; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 0.05em; } .ds-pulse-dot { width: 6px; height: 6px; border-radius: 9999px; background: #10b981; box-shadow: 0 0 8px #10b981; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Obsidian Monolith",
+    "overview": "Tylcao's visual world embodies hyper-disciplined dark architecture with sharp electric laser lines and measured data density. Grounded in the spirit of the Andean wildcat Tilcayo (Leopardus tilcayo), it marries deep-tech engineering with tactile command-line utility.",
+    "keyCharacteristics": [
+      "Obsidian Monolith Surfaces (#08090d to #0f121d with zero milky wash)",
+      "Precision Laser Accents (Electric cyan #00f2fe, emerald #10b981, spectral violet #8b5cf6)",
+      "Instrument-Grade Typography (Geist Sans paired with disciplined Geist Mono)",
+      "Tactile Material Feedback (Hairline slate boundaries that react with ambient glows)"
+    ],
+    "rules": [
+      {
+        "name": "The Rarity Rule",
+        "body": "Neon cyan is an electrical spark, not wallpaper. It must never occupy more than 8% of any given screen area.",
+        "section": "colors"
+      },
+      {
+        "name": "The Solid Typography Rule",
+        "body": "Decorative multi-color gradient text is forbidden on headlines. Headings must be rendered in solid high-contrast white.",
+        "section": "colors"
+      },
+      {
+        "name": "The Telemetry Rule",
+        "body": "Emerald is an operational truth token. It signals active servers and verified status; it is never decorative filler.",
+        "section": "colors"
+      },
+      {
+        "name": "The Legibility Floor Rule",
+        "body": "Body copy must never drop below 14px (text-sm). Long paragraph blocks at 12px (text-xs) are strictly prohibited.",
+        "section": "typography"
+      },
+      {
+        "name": "The Monospace Guardrail Rule",
+        "body": "Monospace is an instrument of technical evidence, not a styling shortcut.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Redundancy Rule",
+        "body": "A service capability or service pillar may be presented at full depth exactly once per page.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-At-Rest Rule",
+        "body": "All surfaces rest flat at rest with crisp hairline borders. Ambient glows activate strictly on user interaction.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do wrap all Braille and block-character ASCII art in aria-hidden=\"true\" with an accessible descriptive label.",
+      "Do set primary body and descriptive copy to at least 14px (text-sm) with high-contrast text.",
+      "Do maintain strict parity between Startup and Enterprise pathways.",
+      "Do present verified capabilities, real delivery turnaround windows (1–4 weeks), and concrete tech stacks.",
+      "Do reserve emerald (#10b981) exclusively for uptime, verification, and live telemetry."
+    ],
+    "donts": [
+      "Don't use multi-color gradient text across headings.",
+      "Don't tile synthetic 40px blueprint grid lines across the entire page body.",
+      "Don't fabricate client names, fake enterprise logos, or unverified performance metrics.",
+      "Don't apply monospace typography to general body text or standard navigational links.",
+      "Don't display sticky viewport overlays that lack a user-accessible minimize or dismiss button."
+    ]
+  }
+}
