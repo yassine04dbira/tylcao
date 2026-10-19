@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --background: #08090d;
+  --foreground: #f1f5f9;
+  --surface: #0f121d;
+  --surface-alt: #161b2a;
+  --border: #1e263d;
+  --border-glow: rgba(6, 182, 212, 0.3);
+  --cyan: #00f2fe;
+  --cyan-dim: #0284c7;
+  --emerald: #10b981;
+  --violet: #8b5cf6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom cyber grid and scanline textures */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.15) 0%, rgba(139, 92, 246, 0.05) 40%, transparent 70%);
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #ffffff 20%, #38bdf8 60%, #00f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #ffffff 20%, #34d399 60%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-glow-cyan {
+  box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+}
+
+.border-glow-emerald {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25);
+}
+
+/* Terminal custom scrollbar */
+.terminal-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.terminal-scroll::-webkit-scrollbar-track {
+  background: #090b10;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: #1e263d;
+  border-radius: 3px;
+}
+
+.terminal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #00f2fe;
+}
